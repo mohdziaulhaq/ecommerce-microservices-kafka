@@ -1,0 +1,15 @@
+### Create a new product
+POST http://localhost:4000/products
+Content-Type: application/json
+
+{
+  "productName": "MacBook Air M3",
+  "description": "Apple MacBook Air with M3 chip, 8GB RAM, 256GB SSD",
+  "price": 1299.99,
+  "discountedPrice": 1199.99,
+  "quantityAvailable": 25,
+  "dateAdded": "2025-09-18T10:00:00",
+  "live": true,
+  "inStock": true,
+  "productImageName": "macbook_air_m3.png"
+}

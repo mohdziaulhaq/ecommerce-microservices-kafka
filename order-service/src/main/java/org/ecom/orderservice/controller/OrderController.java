@@ -1,14 +1,6 @@
 package org.ecom.orderservice.controller;
 
-//import com.zia.electronix.express.dtos.ApiResponseMessage;
-//import com.zia.electronix.express.dtos.CreateOrderRequest;
-//import com.zia.electronix.express.dtos.OrderDto;
-//import com.zia.electronix.express.dtos.PageableResponse;
-//import com.zia.electronix.express.services.OrderService;
-
 import jakarta.validation.Valid;
-//import org.ecom.orderservice.dto.CreateOrderRequest;
-//import org.ecom.orderservice.dto.OrderDto;
 import org.ecom.commonutils.internal.apis.domain.ApiResponseMessage;
 import org.ecom.commonutils.order.dtos.CreateOrderRequest;
 import org.ecom.commonutils.order.dtos.OrderDto;
@@ -18,8 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/orders")
@@ -48,11 +38,11 @@ public class OrderController {
     }
 
     //get orders of the user
-    @GetMapping("/{userId}")
-    public ResponseEntity<List<OrderDto>> getAllOrdersOfUser(@PathVariable String userId) {
-        List<OrderDto> ordersOfUser = orderService.getOrdersOfUser(userId);
-        return new ResponseEntity<>(ordersOfUser,HttpStatus.OK);
-    }
+//    @GetMapping("/{userId}")
+//    public ResponseEntity<List<OrderDto>> getAllOrdersOfUser(@PathVariable String userId) {
+//        List<OrderDto> ordersOfUser = orderService.getOrdersOfUser(userId);
+//        return new ResponseEntity<>(ordersOfUser,HttpStatus.OK);
+//    }
 
     @GetMapping
     public ResponseEntity<PageableResponse<OrderDto>> getAllOrders(

@@ -19,9 +19,7 @@ public class OrderItem {
 
     private double totalPrice;
 
-    @OneToOne
-    @JoinColumn(name = "product_id")
-    private Product product;
+    private String productId;
 
     @ManyToOne
     @JoinColumn(name = "order_id")

@@ -1,6 +1,7 @@
 package org.ecom.productservice.exception;
 
-//import org.ecom.productservice.dto.ApiResponseMessage;
+import org.ecom.commonutils.exception.BadApiRequestException;
+import org.ecom.commonutils.exception.ResourceNotFoundException;
 import org.ecom.commonutils.internal.apis.domain.ApiResponseMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,8 +12,6 @@ import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-
-import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

@@ -1,6 +1,5 @@
-package org.ecom.productservice.utilities;
+package org.ecom.commonutils.pagination;
 
-import org.ecom.productservice.dto.PageableResponse;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
 

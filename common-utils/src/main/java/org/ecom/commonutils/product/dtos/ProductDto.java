@@ -1,8 +1,8 @@
-package org.ecom.productservice.dto;
+package org.ecom.commonutils.product.dtos;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import org.ecom.productservice.dto.validators.CreateProductValidationGroup;
+import org.ecom.commonutils.product.dtos.validator.CreateProductValidationGroup;
 
 import java.util.Date;
 

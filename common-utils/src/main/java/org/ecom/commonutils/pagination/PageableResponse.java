@@ -1,4 +1,4 @@
-package org.ecom.productservice.dto;
+package org.ecom.commonutils.pagination;
 
 import java.util.List;
 

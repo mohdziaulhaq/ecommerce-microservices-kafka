@@ -1,4 +1,4 @@
-package org.ecom.productservice.dto;
+package org.ecom.commonutils.internal.apis.domain;
 
 import org.springframework.http.HttpStatus;
 

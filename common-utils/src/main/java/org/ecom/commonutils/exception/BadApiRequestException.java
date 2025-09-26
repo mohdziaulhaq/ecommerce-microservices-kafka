@@ -1,4 +1,4 @@
-package org.ecom.productservice.exception;
+package org.ecom.commonutils.exception;
 
 public class BadApiRequestException extends RuntimeException {
     public BadApiRequestException(String message) {

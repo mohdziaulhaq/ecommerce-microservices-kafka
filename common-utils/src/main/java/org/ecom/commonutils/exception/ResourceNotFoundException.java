@@ -1,4 +1,4 @@
-package org.ecom.productservice.exception;
+package org.ecom.commonutils.exception;
 
 import lombok.Builder;
 

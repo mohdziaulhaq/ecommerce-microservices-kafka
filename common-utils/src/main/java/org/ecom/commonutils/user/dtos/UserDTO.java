@@ -1,6 +1,5 @@
 package org.ecom.commonutils.user.dtos;
 
-import com.notevault.models.Role;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -18,11 +17,11 @@ public class UserDTO {
     private String twoFactorSecret;
     private boolean isTwoFactorEnabled;
     private String signUpMethod;
-    private Role role;
+    private RoleDto role;
     private LocalDateTime creationDate;
     private LocalDateTime updatedDate;
 
-    public UserDTO(Long userId, String username, String email, boolean isAccountNonLocked, boolean isAccountNonExpired, boolean isCredentialsNonExpired, boolean isEnabled, LocalDate credentialsExpiryDate, LocalDate accountExpiryDate, String twoFactorSecret, boolean isTwoFactorEnabled, String signUpMethod, Role role, LocalDateTime creationDate, LocalDateTime updatedDate) {
+    public UserDTO(Long userId, String username, String email, boolean isAccountNonLocked, boolean isAccountNonExpired, boolean isCredentialsNonExpired, boolean isEnabled, LocalDate credentialsExpiryDate, LocalDate accountExpiryDate, String twoFactorSecret, boolean isTwoFactorEnabled, String signUpMethod, RoleDto role, LocalDateTime creationDate, LocalDateTime updatedDate) {
         this.userId = userId;
         this.username = username;
         this.email = email;
@@ -91,7 +90,7 @@ public class UserDTO {
         return this.signUpMethod;
     }
 
-    public Role getRole() {
+    public RoleDto getRole() {
         return this.role;
     }
 
@@ -151,7 +150,7 @@ public class UserDTO {
         this.signUpMethod = signUpMethod;
     }
 
-    public void setRole(Role role) {
+    public void setRole(RoleDto role) {
         this.role = role;
     }
 

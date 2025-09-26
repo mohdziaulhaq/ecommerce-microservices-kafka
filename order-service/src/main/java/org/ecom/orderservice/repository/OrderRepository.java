@@ -1,7 +1,8 @@
 package org.ecom.orderservice.repository;
 
-import com.zia.electronix.express.entities.Order;
-import com.zia.electronix.express.entities.User;
+//import com.zia.electronix.express.entities.Order;
+//import com.zia.electronix.express.entities.User;
+import org.ecom.orderservice.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

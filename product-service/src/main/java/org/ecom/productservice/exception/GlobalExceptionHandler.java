@@ -1,6 +1,7 @@
 package org.ecom.productservice.exception;
 
-import org.ecom.productservice.dto.ApiResponseMessage;
+//import org.ecom.productservice.dto.ApiResponseMessage;
+import org.ecom.commonutils.internal.apis.domain.ApiResponseMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -48,3 +49,5 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(message,HttpStatus.BAD_REQUEST);
     }
 }
+
+

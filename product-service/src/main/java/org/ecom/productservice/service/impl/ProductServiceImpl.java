@@ -2,13 +2,17 @@ package org.ecom.productservice.service.impl;
 
 //import com.zia.electronix.express.entities.Category;
 //import com.zia.electronix.express.repositories.CategoryRepository;
-import org.ecom.productservice.dto.PageableResponse;
-import org.ecom.productservice.dto.ProductDto;
+//import org.ecom.productservice.dto.PageableResponse;
+//import org.ecom.productservice.dto.ProductDto;
+
+import org.ecom.commonutils.pagination.Helper;
+import org.ecom.commonutils.pagination.PageableResponse;
+import org.ecom.commonutils.product.dtos.ProductDto;
 import org.ecom.productservice.exception.ResourceNotFoundException;
 import org.ecom.productservice.model.Product;
 import org.ecom.productservice.repository.ProductRepository;
 import org.ecom.productservice.service.ProductService;
-import org.ecom.productservice.utilities.Helper;
+//import org.ecom.productservice.utilities.Helper;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -76,7 +80,7 @@ public class ProductServiceImpl implements ProductService {
         Sort sort = (sortDir.equalsIgnoreCase("desc"))?(Sort.by(sortBy).descending()):(Sort.by(sortBy).ascending());
         Pageable pageable = PageRequest.of(pageNumber, pageSize, sort);
         Page<Product> products = productRepository.findAll(pageable);
-        return Helper.getPageableResponse(products, ProductDto.class);
+        return org.ecom.commonutils.pagination.Helper.getPageableResponse(products, ProductDto.class);
     }
 
     @Override

@@ -1,14 +1,20 @@
 package org.ecom.productservice.controller;
 
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import jakarta.validation.groups.Default;
 
-import org.ecom.productservice.dto.ApiResponseMessage;
-import org.ecom.productservice.dto.PageableResponse;
-import org.ecom.productservice.dto.ProductDto;
-import org.ecom.productservice.dto.validators.CreateProductValidationGroup;
+//import org.ecom.productservice.dto.ApiResponseMessage;
+//import org.ecom.productservice.dto.PageableResponse;
+//import org.ecom.productservice.dto.ProductDto;
+//import org.ecom.productservice.dto.validators.CreateProductValidationGroup;
+import org.ecom.commonutils.internal.apis.domain.ApiResponseMessage;
+import org.ecom.commonutils.pagination.PageableResponse;
+import org.ecom.commonutils.product.dtos.ProductDto;
+import org.ecom.commonutils.product.dtos.validator.CreateProductValidationGroup;
 import org.ecom.productservice.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,6 +33,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/products")
+@Tag(name = "Product",description = "API for managing Products")
 public class ProductController {
 
     @Autowired
@@ -39,6 +46,7 @@ public class ProductController {
 
     //create
     @PostMapping
+    @Operation(summary = "Create a new Product")
     public ResponseEntity<ProductDto> createProduct(
             @Validated({Default.class, CreateProductValidationGroup.class})
             @RequestBody ProductDto productDto) {
@@ -47,6 +55,7 @@ public class ProductController {
     }
     //update
     @PutMapping("/{productId}")
+    @Operation(summary = "Update a new Product")
     public ResponseEntity<ProductDto> updateProduct(@PathVariable UUID productId, @RequestBody ProductDto productDto) {
         ProductDto updatedProduct = productService.updateProduct(productDto,productId);
         return new ResponseEntity<>(updatedProduct, HttpStatus.OK);
@@ -69,6 +78,7 @@ public class ProductController {
 
     //get all
     @GetMapping()
+    @Operation(summary = "Get Products")
     public ResponseEntity<PageableResponse<ProductDto>> getAll(
             @RequestParam(value = "pageNumber", defaultValue = "0", required = false) int pageNumber,
             @RequestParam(value = "pageSize", defaultValue = "10", required = false) int pageSize,

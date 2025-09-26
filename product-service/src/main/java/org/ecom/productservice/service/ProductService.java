@@ -1,7 +1,7 @@
 package org.ecom.productservice.service;
 
-import org.ecom.productservice.dto.PageableResponse;
-import org.ecom.productservice.dto.ProductDto;
+import org.ecom.commonutils.pagination.PageableResponse;
+import org.ecom.commonutils.product.dtos.ProductDto;
 
 import java.util.UUID;
 
@@ -11,6 +11,7 @@ public interface ProductService {
     ProductDto createProduct(ProductDto productDto);
     //update
     ProductDto updateProduct(ProductDto productDto, UUID productId);
+
     //delete
     void deleteProduct(UUID productId);
     //get single

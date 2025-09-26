@@ -3,13 +3,25 @@ package org.ecom.orderservice.service.impl;
 //import com.zia.electronix.express.dtos.CreateOrderRequest;
 //import com.zia.electronix.express.dtos.OrderDto;
 //import com.zia.electronix.express.dtos.PageableResponse;
-import com.zia.electronix.express.entities.*;
-import com.zia.electronix.express.exception.ResourceNotFoundException;
-import com.zia.electronix.express.repositories.CartRepository;
-import com.zia.electronix.express.repositories.OrderRepository;
-import com.zia.electronix.express.repositories.UserRepository;
-import com.zia.electronix.express.services.OrderService;
-import com.zia.electronix.express.utilities.Helper;
+//import com.zia.electronix.express.entities.*;
+//import com.zia.electronix.express.exception.ResourceNotFoundException;
+//import com.zia.electronix.express.repositories.CartRepository;
+//import com.zia.electronix.express.repositories.OrderRepository;
+//import com.zia.electronix.express.repositories.UserRepository;
+//import com.zia.electronix.express.services.OrderService;
+//import com.zia.electronix.express.utilities.Helper;
+import org.ecom.commonutils.exception.ResourceNotFoundException;
+import org.ecom.commonutils.order.dtos.CreateOrderRequest;
+import org.ecom.commonutils.order.dtos.OrderDto;
+import org.ecom.commonutils.pagination.Helper;
+import org.ecom.commonutils.pagination.PageableResponse;
+import org.ecom.orderservice.model.Cart;
+import org.ecom.orderservice.model.CartItem;
+import org.ecom.orderservice.model.Order;
+import org.ecom.orderservice.model.OrderItem;
+import org.ecom.orderservice.repository.CartRepository;
+import org.ecom.orderservice.repository.OrderRepository;
+import org.ecom.orderservice.service.OrderService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -41,7 +53,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public OrderDto createOrder(CreateOrderRequest request) {
-       User user = userRepository.findById(request.getUserId()).orElseThrow(()-> new ResourceNotFoundException("User Not Found"));
+//       User user = userRepository.findById(request.getUserId()).orElseThrow(()-> new ResourceNotFoundException("User Not Found"));
        Cart cart = cartRepository.findById(request.getCartId()).orElseThrow(()-> new ResourceNotFoundException("Cart Not Found with given ID"));
        List<CartItem> cartItems = cart.getItems();
        if(cartItems.size() <=0){
@@ -88,12 +100,12 @@ public class OrderServiceImpl implements OrderService {
 
     }
 
-    @Override
-    public List<OrderDto> getOrdersOfUser(String userId) {
-        User user = userRepository.findById(userId).orElseThrow(()-> new ResourceNotFoundException("User Not Found"));
-        List<Order> orders = user.getOrderList();
-        return orders.stream().map(order -> modelMapper.map(order, OrderDto.class)).collect(Collectors.toList());
-    }
+//    @Override
+//    public List<OrderDto> getOrdersOfUser(String userId) {
+//        User user = userRepository.findById(userId).orElseThrow(()-> new ResourceNotFoundException("User Not Found"));
+//        List<Order> orders = user.getOrderList();
+//        return orders.stream().map(order -> modelMapper.map(order, OrderDto.class)).collect(Collectors.toList());
+//    }
 
     @Override
     public PageableResponse<OrderDto> getOrders(int pageNumber, int pageSize, String sortBy, String sortDir) {

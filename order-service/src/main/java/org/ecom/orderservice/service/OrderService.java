@@ -12,7 +12,7 @@ public interface OrderService {
     //remove order
     void removeOrder(String orderId);
     //get orders of user
-    List<OrderDto> getOrdersOfUser(String userId);
+//    List<OrderDto> getOrdersOfUser(String userId);
     //get orders
     PageableResponse<OrderDto> getOrders(int pageNumber, int pageSize, String sortBy, String sortDir);
 

@@ -1,0 +1,12 @@
+#spring.application.name=configserver
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/mohdziaulhaq/ecommerce-microservices-configuration
+          default-label: master
+server:
+  port: 8008

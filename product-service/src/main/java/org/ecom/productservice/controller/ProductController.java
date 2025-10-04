@@ -53,6 +53,7 @@ public class ProductController {
         ProductDto productDto1 = productService.createProduct(productDto);
         return new ResponseEntity<>(productDto1, HttpStatus.CREATED);
     }
+
     //update
     @PutMapping("/{productId}")
     @Operation(summary = "Update a new Product")

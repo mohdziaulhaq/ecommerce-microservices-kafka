@@ -1,5 +1,7 @@
 package org.ecom.userservice.model;
 
+import jakarta.persistence.*;
+
 import java.time.Instant;
 
 @Entity

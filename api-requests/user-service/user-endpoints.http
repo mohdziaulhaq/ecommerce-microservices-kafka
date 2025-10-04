@@ -1,0 +1,9 @@
+### Create a new product
+POST http://localhost:4002/api/auth/public/signin
+Content-Type: application/json
+X-XSRF-TOKEN: bs4YTaDyN-IBkf8g3CTDkFD-7_3Y3Er5wTxpiRYQJUYvdOpgXPYsepiTB9ssoZpB7gn38zXOwsTq6SzU9AhfuCR0FnEcFdIC
+
+{
+  "username" : "user1",
+  "password" : "password1"
+}

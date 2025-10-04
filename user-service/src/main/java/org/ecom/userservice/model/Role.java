@@ -1,8 +1,10 @@
 package org.ecom.userservice.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.notevault.enums.AppRole;
+//import com.notevault.enums.AppRole;
+import jakarta.persistence.*;
 import lombok.ToString;
+import org.ecom.commonutils.enums.user.AppRole;
 
 import java.util.HashSet;
 import java.util.Set;

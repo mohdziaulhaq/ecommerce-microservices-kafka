@@ -1,7 +1,9 @@
 package org.ecom.userservice.security.services;
 
-import com.notevault.models.User;
-import com.notevault.repositories.UserRepository;
+//import com.notevault.models.User;
+//import com.notevault.repositories.UserRepository;
+import org.ecom.userservice.model.User;
+import org.ecom.userservice.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

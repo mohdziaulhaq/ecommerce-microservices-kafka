@@ -1,6 +1,9 @@
 package org.ecom.commonutils.user.dtos;
 
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -41,6 +44,9 @@ public class UserDTO {
 
     public UserDTO() {
     }
+
+//    public UserDTO(Long userId, @NotBlank @Size(max = 20) String userName, @NotBlank @Size(max = 50) @Email String email, boolean accountNonLocked, boolean accountNonExpired, boolean credentialsNonExpired, boolean enabled, LocalDate credentialsExpiryDate, LocalDate accountExpiryDate, String twoFactorSecret, boolean twoFactorEnabled, String signUpMethod, RoleDto role, LocalDateTime createdDate, LocalDateTime updatedDate) {
+//    }
 
     public Long getUserId() {
         return this.userId;

@@ -1,14 +1,22 @@
 package org.ecom.userservice.controller;
 
-import com.notevault.dtos.*;
-import com.notevault.enums.AppRole;
-import com.notevault.models.Role;
-import com.notevault.models.User;
-import com.notevault.repositories.RoleRepository;
-import com.notevault.repositories.UserRepository;
-import com.notevault.security.jwt.JwtUtils;
-import com.notevault.services.UserService;
+//import com.notevault.dtos.*;
+//import com.notevault.enums.AppRole;
+//import com.notevault.models.Role;
+//import com.notevault.models.User;
+//import com.notevault.repositories.RoleRepository;
+//import com.notevault.repositories.UserRepository;
+//import com.notevault.security.jwt.JwtUtils;
+//import com.notevault.services.UserService;
 import jakarta.validation.Valid;
+import org.ecom.commonutils.enums.user.AppRole;
+import org.ecom.commonutils.user.dtos.*;
+import org.ecom.userservice.model.Role;
+import org.ecom.userservice.model.User;
+import org.ecom.userservice.repository.RoleRepository;
+import org.ecom.userservice.repository.UserRepository;
+import org.ecom.userservice.security.jwt.JwtUtils;
+import org.ecom.userservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -69,7 +77,6 @@ public class AuthController {
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-
         String jwtToken = jwtUtils.generateTokenFromUsername(userDetails);
 
         List<String> roles = userDetails.getAuthorities().stream()
@@ -158,16 +165,16 @@ public class AuthController {
         return new ResponseEntity<>(username, HttpStatus.OK);
     }
 
-    @PostMapping("/public/forgot-password")
-    public ResponseEntity<?> forgotPassword(@RequestParam String email){
-        try{
-            userService.generarePasswordResetToken(email);
-            return  ResponseEntity.ok(new MessageResponse("Password reset email sent successfully"));
-        }catch (Exception e){
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body(new MessageResponse("Error sending password reset email"));
-        }
-    }
+//    @PostMapping("/public/forgot-password")
+//    public ResponseEntity<?> forgotPassword(@RequestParam String email){
+//        try{
+//            userService.generarePasswordResetToken(email);
+//            return  ResponseEntity.ok(new MessageResponse("Password reset email sent successfully"));
+//        }catch (Exception e){
+//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+//                    .body(new MessageResponse("Error sending password reset email"));
+//        }
+//    }
 
     @PostMapping("/public/reset-password")
     public ResponseEntity<?> resetPassword(@RequestParam String token, @RequestParam String password){

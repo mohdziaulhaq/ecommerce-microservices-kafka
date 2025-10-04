@@ -1,6 +1,7 @@
 package org.ecom.commonutils.order.dtos;
 
 import lombok.*;
+import org.ecom.commonutils.product.dtos.ProductDto;
 
 @Getter
 @Setter

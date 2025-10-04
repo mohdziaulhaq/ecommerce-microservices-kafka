@@ -1,0 +1,8 @@
+### Create a new product
+POST http://localhost:4001/carts/1
+Content-Type: application/json
+
+{
+  "productId": "1a2b3c4d-0000-1111-2222-333344445555",
+  "quantity": 10
+}

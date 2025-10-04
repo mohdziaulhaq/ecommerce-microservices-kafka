@@ -1,12 +1,19 @@
 package org.ecom.userservice.config;
 
-import com.notevault.enums.AppRole;
-import com.notevault.models.Role;
-import com.notevault.models.User;
-import com.notevault.repositories.RoleRepository;
-import com.notevault.repositories.UserRepository;
-import com.notevault.security.jwt.AuthEntryPointJwt;
-import com.notevault.security.jwt.AuthTokenFilter;
+//import com.notevault.enums.AppRole;
+//import com.notevault.models.Role;
+//import com.notevault.models.User;
+//import com.notevault.repositories.RoleRepository;
+//import com.notevault.repositories.UserRepository;
+//import com.notevault.security.jwt.AuthEntryPointJwt;
+//import com.notevault.security.jwt.AuthTokenFilter;
+import org.ecom.commonutils.enums.user.AppRole;
+import org.ecom.userservice.model.Role;
+import org.ecom.userservice.model.User;
+import org.ecom.userservice.repository.RoleRepository;
+import org.ecom.userservice.repository.UserRepository;
+import org.ecom.userservice.security.jwt.AuthEntryPointJwt;
+import org.ecom.userservice.security.jwt.AuthTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
@@ -122,7 +129,7 @@ public class SecurityConfig {
                     .orElseGet(() -> roleRepository.save(new Role(AppRole.ROLE_ADMIN)));
 
             if (!userRepository.existsByUserName("user1")) {
-                com.notevault.models.User user1 = new User("user1", "user1@example.com",
+                User user1 = new User("user1", "user1@example.com",
                         passwordEncoder.encode("password1"));
                 user1.setAccountNonLocked(false);
                 user1.setAccountNonExpired(true);
@@ -137,7 +144,7 @@ public class SecurityConfig {
             }
 
             if (!userRepository.existsByUserName("admin")) {
-                com.notevault.models.User admin = new User("admin", "admin@example.com",
+                User admin = new User("admin", "admin@example.com",
                         passwordEncoder.encode("adminPass"));
                 admin.setAccountNonLocked(true);
                 admin.setAccountNonExpired(true);

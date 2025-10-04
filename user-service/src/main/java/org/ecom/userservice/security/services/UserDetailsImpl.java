@@ -2,9 +2,10 @@ package org.ecom.userservice.security.services;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.notevault.models.User;
+//import com.notevault.models.User;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.ecom.userservice.model.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

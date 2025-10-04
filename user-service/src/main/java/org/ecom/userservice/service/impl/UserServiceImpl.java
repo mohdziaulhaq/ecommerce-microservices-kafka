@@ -1,15 +1,26 @@
 package org.ecom.userservice.service.impl;
 
-import com.notevault.dtos.UserDTO;
-import com.notevault.enums.AppRole;
-import com.notevault.models.PasswordResetToken;
-import com.notevault.models.Role;
-import com.notevault.models.User;
-import com.notevault.repositories.PasswordResetTokenRepository;
-import com.notevault.repositories.RoleRepository;
-import com.notevault.repositories.UserRepository;
-import com.notevault.services.UserService;
-import com.notevault.utils.EmailService;
+//import com.notevault.dtos.UserDTO;
+//import com.notevault.enums.AppRole;
+//import com.notevault.models.PasswordResetToken;
+//import com.notevault.models.Role;
+//import com.notevault.models.User;
+//import com.notevault.repositories.PasswordResetTokenRepository;
+//import com.notevault.repositories.RoleRepository;
+//import com.notevault.repositories.UserRepository;
+//import com.notevault.services.UserService;
+//import com.notevault.utils.EmailService;
+import org.ecom.commonutils.enums.user.AppRole;
+import org.ecom.commonutils.user.dtos.RoleDto;
+import org.ecom.commonutils.user.dtos.UserDTO;
+import org.ecom.userservice.model.PasswordResetToken;
+import org.ecom.userservice.model.Role;
+import org.ecom.userservice.model.User;
+import org.ecom.userservice.repository.PasswordResetTokenRepository;
+import org.ecom.userservice.repository.RoleRepository;
+import org.ecom.userservice.repository.UserRepository;
+//import org.ecom.userservice.service.EmailService;
+import org.ecom.userservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -35,8 +46,8 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private PasswordResetTokenRepository passwordResetTokenRepository;
 
-    @Autowired
-    private EmailService emailService;
+//    @Autowired
+//    private EmailService emailService;
     @Autowired
     private PasswordEncoder passwordEncoder;
 
@@ -83,22 +94,22 @@ public class UserServiceImpl implements UserService {
         }
     }
 
-    @Override
-    public void generarePasswordResetToken(String email) {
-        User user = userRepository.findByEmail(email).orElseThrow(
-                () -> new RuntimeException("User with email " + email + " not found")
-        );
-        String token = UUID.randomUUID().toString();
-        Instant expiryDate = Instant.now().plus(24, ChronoUnit.HOURS);
-
-        PasswordResetToken resetToken = new PasswordResetToken(token,expiryDate, user);
-        passwordResetTokenRepository.save(resetToken);
-
-        String resetUrl = frontendUrl+"/reset-password?token="+token;
-        emailService.sendPasswordResetEmail(email, resetUrl);
-
-
-    }
+//    @Override
+//    public void generarePasswordResetToken(String email) {
+//        User user = userRepository.findByEmail(email).orElseThrow(
+//                () -> new RuntimeException("User with email " + email + " not found")
+//        );
+//        String token = UUID.randomUUID().toString();
+//        Instant expiryDate = Instant.now().plus(24, ChronoUnit.HOURS);
+//
+//        PasswordResetToken resetToken = new PasswordResetToken(token,expiryDate, user);
+//        passwordResetTokenRepository.save(resetToken);
+//
+//        String resetUrl = frontendUrl+"/reset-password?token="+token;
+//        emailService.sendPasswordResetEmail(email, resetUrl);
+//
+//
+//    }
 
     @Override
     public void resetPassword(String token, String newPassword) {
@@ -138,6 +149,12 @@ public class UserServiceImpl implements UserService {
     }
 
     private UserDTO convertToDto(User user) {
+        Role role = user.getRole();
+        RoleDto roleDto = new RoleDto();
+        if (role != null) {
+            roleDto.setRoleId(role.getRoleId());
+            roleDto.setRoleName(role.getRoleName());
+        }
         return new UserDTO(
                 user.getUserId(),
                 user.getUserName(),
@@ -151,7 +168,7 @@ public class UserServiceImpl implements UserService {
                 user.getTwoFactorSecret(),
                 user.isTwoFactorEnabled(),
                 user.getSignUpMethod(),
-                user.getRole(),
+                roleDto,
                 user.getCreatedDate(),
                 user.getUpdatedDate()
          );

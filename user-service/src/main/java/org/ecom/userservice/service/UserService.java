@@ -1,7 +1,10 @@
 package org.ecom.userservice.service;
 
-import com.notevault.dtos.UserDTO;
-import com.notevault.models.User;
+//import com.notevault.dtos.UserDTO;
+//import com.notevault.models.User;
+
+import org.ecom.commonutils.user.dtos.UserDTO;
+import org.ecom.userservice.model.User;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,7 +17,7 @@ public interface UserService {
     User findByUsername(String username);
     void updatePassword(Long userId, String newPassword);
 
-    void generarePasswordResetToken(String email);
+//    void generarePasswordResetToken(String email);
 
     void resetPassword(String token, String newPassword);
 

@@ -1,0 +1,3 @@
+### Create a new product
+GET http://localhost:4002/api/csrf-token
+Content-Type: application/json

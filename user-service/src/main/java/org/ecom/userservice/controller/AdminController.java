@@ -1,8 +1,11 @@
 package org.ecom.userservice.controller;
 
-import com.notevault.dtos.UserDTO;
-import com.notevault.models.User;
-import com.notevault.services.UserService;
+//import com.notevault.dtos.UserDTO;
+//import com.notevault.models.User;
+//import com.notevault.services.UserService;
+import org.ecom.commonutils.user.dtos.UserDTO;
+import org.ecom.userservice.model.User;
+import org.ecom.userservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

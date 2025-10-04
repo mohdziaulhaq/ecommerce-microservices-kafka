@@ -1,6 +1,7 @@
 package org.ecom.userservice.repository;
 
-import com.notevault.models.User;
+//import com.notevault.models.User;
+import org.ecom.userservice.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

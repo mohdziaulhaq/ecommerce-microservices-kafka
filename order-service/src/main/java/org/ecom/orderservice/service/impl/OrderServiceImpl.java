@@ -1,15 +1,5 @@
 package org.ecom.orderservice.service.impl;
 
-//import com.zia.electronix.express.dtos.CreateOrderRequest;
-//import com.zia.electronix.express.dtos.OrderDto;
-//import com.zia.electronix.express.dtos.PageableResponse;
-//import com.zia.electronix.express.entities.*;
-//import com.zia.electronix.express.exception.ResourceNotFoundException;
-//import com.zia.electronix.express.repositories.CartRepository;
-//import com.zia.electronix.express.repositories.OrderRepository;
-//import com.zia.electronix.express.repositories.UserRepository;
-//import com.zia.electronix.express.services.OrderService;
-//import com.zia.electronix.express.utilities.Helper;
 import org.ecom.commonutils.exception.ResourceNotFoundException;
 import org.ecom.commonutils.order.dtos.CreateOrderRequest;
 import org.ecom.commonutils.order.dtos.OrderDto;
@@ -39,8 +29,8 @@ import java.util.stream.Collectors;
 @Service
 public class OrderServiceImpl implements OrderService {
 
-    @Autowired
-    private UserRepository userRepository;
+//    @Autowired
+//    private UserRepository userRepository;
 
     @Autowired
     private OrderRepository orderRepository;
@@ -68,7 +58,8 @@ public class OrderServiceImpl implements OrderService {
                 .paymentStatus(request.getPaymentStatus())
                 .orderStatus(request.getOrderStatus())
                 .orderId(UUID.randomUUID().toString())
-                .user(user)
+                .userId(cart.getUserId())
+//                .user(user)
                 .build();
         AtomicReference<Double> orderAmount = new AtomicReference<>(0.0);
 
@@ -76,8 +67,9 @@ public class OrderServiceImpl implements OrderService {
 
           OrderItem orderItem = OrderItem.builder()
                    .quantity(cartItem.getQuantity())
-                   .product(cartItem.getProduct())
-                   .totalPrice(cartItem.getQuantity() * cartItem.getProduct().getDiscountedPrice())
+                  .productId(cartItem.getProductId())
+//                   .product(cartItem.getProduct())
+//                   .totalPrice(cartItem.getQuantity() * cartItem.getProduct().getDiscountedPrice())
                    .order(order).build();
             orderAmount.set((orderAmount.get() + cartItem.getTotalPrice()));
            return orderItem;

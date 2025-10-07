@@ -2,15 +2,24 @@
 spring:
   application:
     name: configserver
+  # tellling config server that we want to make use of native(local file system) to get yaml
+  profiles:
+    active: native
   cloud:
     config:
       server:
-        git:
-          uri: https://github.com/mohdziaulhaq/ecommerce-microservices-configuration.git
-          default-label: master
-          username: ${GIT_USER}
-          password: ${GIT_TOKEN}
+        native:
+          search-locations: classpath:/config
+  # uncomment to fetch from remote git repository
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/mohdziaulhaq/ecommerce-microservices-configuration.git
+#          default-label: master
+#          username: ${GIT_USER}
+#          password: ${GIT_TOKEN}
 server:
-  port: 8008
+  port: 8888
 encrypt:
   key: "0E329232EA6D0D73"

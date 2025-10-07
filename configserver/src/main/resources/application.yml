@@ -6,7 +6,11 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/mohdziaulhaq/ecommerce-microservices-configuration
+          uri: https://github.com/mohdziaulhaq/ecommerce-microservices-configuration.git
           default-label: master
+          username: ${GIT_USER}
+          password: ${GIT_TOKEN}
 server:
   port: 8008
+encrypt:
+  key: "0E329232EA6D0D73"

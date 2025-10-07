@@ -7,6 +7,8 @@ import org.ecom.commonutils.user.dtos.UserDTO;
 import org.ecom.userservice.model.User;
 import org.ecom.userservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,11 +17,22 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/admin")
+@RefreshScope
 //@PreAuthorize("hasRole('ROLE_ADMIN')")
 public class AdminController {
 
     @Autowired
     private UserService userService;
+
+    @Value("${frontend.url}")
+    private String frontendUrl;
+
+    @GetMapping("frontend-url")
+    public ResponseEntity<String> getFrontendUrl() {
+        return new ResponseEntity<>(frontendUrl, HttpStatus.OK);
+    }
+
+
 
     //@PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/getusers")

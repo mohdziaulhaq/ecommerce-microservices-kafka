@@ -1,6 +1,9 @@
 spring:
   application:
     name: user-service
+    # uncomment below two lines to get config from remote git repository
+#  config:
+#    import: optional:configserver:http://localhost:8008
   security:
     # ----------------------------------------------------
     # User Authentication (spring.security.user.*)

@@ -9,7 +9,7 @@ spring:
     config:
       server:
         native:
-          search-locations: classpath:/config
+          search-locations: file:///Users/mohdziaulhaq/Developer/Code/ecommerce-microservices-kafka/configserver/src/main/resources/config
   # uncomment to fetch from remote git repository
 #  cloud:
 #    config:
@@ -23,3 +23,9 @@ server:
   port: 8888
 encrypt:
   key: "0E329232EA6D0D73"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

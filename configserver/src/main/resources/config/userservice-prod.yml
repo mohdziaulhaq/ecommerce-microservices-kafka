@@ -1,9 +1,12 @@
 spring:
   application:
-    name: user-service
-    # uncomment below two lines to get config from remote git repository
-#  config:
-#    import: optional:configserver:http://localhost:8008
+    name: userservice
+  rabbitmq:
+#    container_name: naughty_cartwright
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
   security:
     # ----------------------------------------------------
     # User Authentication (spring.security.user.*)
@@ -70,10 +73,9 @@ logging:
     org.springframework.security: DEBUG
 
 frontend:
-  url: http://localhost:3003
-
+  url: http://mohdziaulhaq.netlify.ddd
 management:
   endpoints:
     web:
       exposure:
-        include: refresh
+        include: busrefresh,refresh,health,info

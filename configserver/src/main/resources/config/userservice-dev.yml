@@ -1,0 +1,82 @@
+spring:
+  application:
+    name: userservice
+  security:
+    # ----------------------------------------------------
+    # User Authentication (spring.security.user.*)
+    # ----------------------------------------------------
+    user:
+      name: admin
+      password: password
+    # ----------------------------------------------------
+    # OAuth2 Client Registration (spring.security.oauth2.*)
+    # ----------------------------------------------------
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: ${GITHUB_CLIENT_ID}
+            client-secret: ${GITHUB_CLIENT_SECRET}
+            scope: read:user,user:email
+          google:
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
+  datasource:
+    # The database config for H2 is grouped here
+    username: admin_user
+    password: password
+    # The following are commented out, but are here for reference:
+    url: jdbc:postgresql://localhost:5434/userservicedb
+    driver-class-name: org.postgresql.Driver
+
+    # username: admin_user
+    # password: password
+    # driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+#    database-platform: org.hibernate.dialect.H2Dialect
+    # The following is commented out, but is here for reference:
+    # properties:
+    #   hibernate:
+    #     dialect: org.hibernate.dialect.MySQLDialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  sql:
+    init:
+      mode: always
+  app:
+    jwtSecret: mySecretKey12343473748sdhsbdhasbdjbasjhbjhsdbfhjdsbf7ef8sfdsf7sdh7fgsd7
+    jwtExpirationMs: 172800000
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${SMTP_USERNAME}
+    password: ${SMTP_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+server:
+  port: 4009
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+frontend:
+  url: http://localhost:7777devvvvv
+
+  # for manually triggering actuator/refresh
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: refresh
+management:
+  endpoints:
+    web:
+      exposure:
+        include: busrefresh,refresh,health,info

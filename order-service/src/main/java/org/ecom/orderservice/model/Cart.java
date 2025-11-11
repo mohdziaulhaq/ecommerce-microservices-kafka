@@ -15,13 +15,13 @@ public class Cart {
 
     private Date createdAt;
 
-    private String userId;
+    private Long userId;
 
     @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
     private List<CartItem> items = new ArrayList<>();
 
 
-    public Cart(String cartId, Date createdAt, String userId, List<CartItem> items) {
+    public Cart(String cartId, Date createdAt, Long userId, List<CartItem> items) {
         this.cartId = cartId;
         this.createdAt = createdAt;
         this.userId = userId;
@@ -43,7 +43,7 @@ public class Cart {
         return this.createdAt;
     }
 
-    public String getUserId() {
+    public Long getUserId() {
         return this.userId;
     }
 
@@ -59,7 +59,7 @@ public class Cart {
         this.createdAt = createdAt;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
@@ -70,7 +70,7 @@ public class Cart {
     public static class CartBuilder {
         private String cartId;
         private Date createdAt;
-        private String userId;
+        private Long userId;
         private List<CartItem> items;
 
         CartBuilder() {
@@ -86,7 +86,7 @@ public class Cart {
             return this;
         }
 
-        public CartBuilder userId(String userId) {
+        public CartBuilder userId(Long userId) {
             this.userId = userId;
             return this;
         }

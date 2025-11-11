@@ -29,12 +29,12 @@ public class Order {
 
     private Date deliveryDate;
 
-    private String userId;
+    private Long userId;
 
     @OneToMany(mappedBy = "order", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<OrderItem> orderItems = new ArrayList<>();
 
-    public Order(String orderId, String orderStatus, String paymentStatus, String billingName, String billingPhone, String billingAddress, double orderAmount, Date orderedDate, Date expectedDeliveryDate, Date deliveryDate, String userId, List<OrderItem> orderItems) {
+    public Order(String orderId, String orderStatus, String paymentStatus, String billingName, String billingPhone, String billingAddress, double orderAmount, Date orderedDate, Date expectedDeliveryDate, Date deliveryDate, Long userId, List<OrderItem> orderItems) {
         this.orderId = orderId;
         this.orderStatus = orderStatus;
         this.paymentStatus = paymentStatus;
@@ -96,7 +96,7 @@ public class Order {
         return this.deliveryDate;
     }
 
-    public String getUserId() {
+    public Long getUserId() {
         return this.userId;
     }
 
@@ -144,7 +144,7 @@ public class Order {
         this.deliveryDate = deliveryDate;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
@@ -163,7 +163,7 @@ public class Order {
         private Date orderedDate;
         private Date expectedDeliveryDate;
         private Date deliveryDate;
-        private String userId;
+        private Long userId;
         private List<OrderItem> orderItems;
 
         OrderBuilder() {
@@ -219,7 +219,7 @@ public class Order {
             return this;
         }
 
-        public OrderBuilder userId(String userId) {
+        public OrderBuilder userId(Long userId) {
             this.userId = userId;
             return this;
         }

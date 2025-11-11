@@ -1,9 +1,14 @@
 package org.ecom.orderservice.service.impl;
 
+import lombok.AllArgsConstructor;
 import org.ecom.commonutils.exception.BadApiRequestException;
 import org.ecom.commonutils.order.dtos.AddItemToCartRequest;
 import org.ecom.commonutils.order.dtos.CartDto;
 import org.ecom.commonutils.product.dtos.ProductDto;
+import org.ecom.commonutils.user.dtos.UserDTO;
+import org.ecom.commonutils.user.dtos.UserInfoResponse;
+import org.ecom.orderservice.client.ProductServiceClient;
+import org.ecom.orderservice.client.UserServiceClient;
 import org.ecom.orderservice.model.Cart;
 import org.ecom.orderservice.model.CartItem;
 import org.ecom.orderservice.repository.CartItemRepository;
@@ -13,6 +18,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Date;
@@ -23,6 +29,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.Collectors;
 
 @Service
+//@Transactional
 public class CartServiceImpl implements CartService {
 
 //    @Autowired
@@ -37,17 +44,31 @@ public class CartServiceImpl implements CartService {
     @Autowired
     private ModelMapper modelMapper;
 
+    //Using RestTemplate
+//    @Autowired
+//    private RestTemplate restTemplate;
+
     @Autowired
-    private RestTemplate restTemplate;
+    private final ProductServiceClient productServiceClient;
+
+    @Autowired
+    private final UserServiceClient userServiceClient;
+
+
 
     @Value("${product.service.url}")
     private String productServiceUrl;
+
+    public CartServiceImpl(ProductServiceClient productServiceClient, UserServiceClient userServiceClient) {
+        this.productServiceClient = productServiceClient;
+        this.userServiceClient = userServiceClient;
+    }
 
 //    @Autowired
 //    private UserRepository userRepository;
 
     @Override
-    public CartDto addItemToCart(String userId, AddItemToCartRequest request) {
+    public CartDto addItemToCart(Long userId, AddItemToCartRequest request) {
         int quantity = request.getQuantity();
         String productId = request.getProductId();
 
@@ -56,13 +77,25 @@ public class CartServiceImpl implements CartService {
         //fetch product from its id
 //        Product product = productRepository.findById(productId).orElseThrow(() -> new ResourceNotFoundException("Product not found"));
         // new code with ProductDto
-        ProductDto product = restTemplate.getForObject(
-                 productServiceUrl+"/products/{productId}",
-                ProductDto.class,
-                productId // pass as string
-        );
+
+        //Using RestTemplate
+//        ProductDto product = restTemplate.getForObject(
+//                 productServiceUrl+"/products/{productId}",
+//                ProductDto.class,
+//                productId // pass as string
+//        );
+
+        // Using OpenFeign
+       ProductDto product = productServiceClient.getProduct(productId);
+
         // fetch user from its id
 //        User user = userRepository.findById(userId).orElseThrow(()-> new ResourceNotFoundException("User not found"));
+
+        System.out.println("USER ID PASSED"+ userId);
+        UserInfoResponse user = userServiceClient.getUserInfo(userId);
+        if(user.getId() == null) {
+            throw new BadApiRequestException("User not found");
+        }
 
         Cart cart = null;
 

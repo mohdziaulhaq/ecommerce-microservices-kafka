@@ -98,6 +98,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/csrf-token").permitAll()
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         .requestMatchers("/oauth2/**").permitAll()
+                        .requestMatchers("/internal/users/**").permitAll()
                         .anyRequest().authenticated())
                 .oauth2Login(oauth -> {
                     oauth.successHandler(oAuth2LoginSuccessHandler);

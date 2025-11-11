@@ -1,0 +1,3 @@
+# Ignore Loki metadata files
+xl.meta
+xl.meta.*

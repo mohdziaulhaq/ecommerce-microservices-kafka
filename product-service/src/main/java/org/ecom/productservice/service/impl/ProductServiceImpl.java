@@ -16,6 +16,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -65,6 +66,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductDto getProduct(UUID productId) {
+        List<Product> allProducts = productRepository.findAll();
         Product product = productRepository.findById(productId).orElseThrow(() -> new ResourceNotFoundException("Product not found"));
         return modelMapper.map(product, ProductDto.class);
     }

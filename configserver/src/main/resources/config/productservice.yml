@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: product-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db
+    driver-class-name: org.postgresql.Driver
+    username: admin_user
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+  sql:
+    init:
+      mode: always
+
+
+
+server:
+  port: 4000
+  address: 0.0.0.0
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+# UNCOMMENT TO USE IN-MEMORY DATABASE OUTSIDE OF DOCKER
+# spring:
+#   h2:
+#     console:
+#       path: /h2-console
+#   datasource:
+#     url: jdbc:h2:mem:testdb
+#     driver-class-name: org.h2.Driver
+#     username: admin_viewer
+#     password: password
+#   jpa:
+#     database-platform: org.hibernate.dialect.H2Dialect
+#     hibernate:
+#       ddl-auto: update
+#   sql:
+#     init:
+#       mode: always

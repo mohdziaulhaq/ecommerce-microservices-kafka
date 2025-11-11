@@ -39,7 +39,7 @@ spring:
     # The following is commented out, but is here for reference:
     # properties:
     #   hibernate:
-    #     dialect: org.hibernate.dialect.MySQLDialect
+    #     dialect: org.hibernate.dialect.PostgreSQL10Dialect
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   sql:
     init:

@@ -9,7 +9,9 @@ spring:
     config:
       server:
         native:
-          search-locations: file:///Users/mohdziaulhaq/Developer/Code/ecommerce-microservices-kafka/configserver/src/main/resources/config
+#          search-locations: file:/app/config
+#          uncomment below line to run in local
+            search-locations: file:///Users/mohdziaulhaq/Developer/Code/ecommerce-microservices-kafka/configserver/src/main/resources/config
   # uncomment to fetch from remote git repository
 #  cloud:
 #    config:

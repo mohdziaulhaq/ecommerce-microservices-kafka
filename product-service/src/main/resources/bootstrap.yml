@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: product-service
+  #  cloud:
+  #    config:
+  #      enabled: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db
+    driver-class-name: org.postgresql.Driver
+    username: admin_user
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+  sql:
+    init:
+      mode: never
+server:
+  profiles:
+    active: default
+  #uncomment below two lines to get config from remote git repository
+  config:
+        import: optional:configserver:http://localhost:8888
+#    import: optional:configserver:http://configserver:8888
+  port: 4000
+logging:
+  file:
+    name: logs/${spring.application.name}.log
+  logback:
+    rollingpolicy:
+      max-file-size: 5MB
+      max-history: 7

@@ -30,6 +30,14 @@ public class UserInfoResponse {
         this.roles = roles;
     }
 
+    public UserInfoResponse(Long id, String username, String email) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
+    }
+
+    public UserInfoResponse() {}
+
     public Long getId() {
         return this.id;
     }

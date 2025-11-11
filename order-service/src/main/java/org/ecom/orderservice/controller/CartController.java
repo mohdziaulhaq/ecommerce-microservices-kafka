@@ -15,10 +15,9 @@ public class CartController {
     @Autowired
     private CartService cartService;
 
-
     @PostMapping("/{username}")
     public ResponseEntity<CartDto> addItemToCart(
-            @PathVariable String username,
+            @PathVariable Long username,
             @RequestBody AddItemToCartRequest request) {
         CartDto cartDto = cartService.addItemToCart(username,request);
         return new ResponseEntity<>(cartDto, HttpStatus.CREATED);

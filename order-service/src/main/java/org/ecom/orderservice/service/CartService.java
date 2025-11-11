@@ -11,7 +11,7 @@ public interface CartService {
     //case1: if cart is not available for the user then we create it to add items
     // case2: card is available: add items to cart
 
-    CartDto addItemToCart(String userId, AddItemToCartRequest request);
+    CartDto addItemToCart(Long userId, AddItemToCartRequest request);
 //    void removeItemFromCart(String userId,int cartItemId);
 //    void clearCart(String userId);
 //    CartDto getCart(String userId);

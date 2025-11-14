@@ -1,26 +1,289 @@
-2025-11-11T07:40:26.383-06:00  INFO 24967 --- [product-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-11-11T07:40:26.566-06:00  INFO 24967 --- [product-service] [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
-2025-11-11T07:40:26.689-06:00  INFO 24967 --- [product-service] [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=product-service, profiles=[default], label=null, version=null, state=null
-2025-11-11T07:40:26.690-06:00  INFO 24967 --- [product-service] [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
-2025-11-11T07:40:26.695-06:00  INFO 24967 --- [product-service] [restartedMain] o.e.p.ProductServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2025-11-11T07:40:27.189-06:00  INFO 24967 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-11-11T07:40:27.241-06:00  INFO 24967 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interface.
-2025-11-11T07:40:27.319-06:00  INFO 24967 --- [product-service] [restartedMain] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2025-11-11T07:40:27.322-06:00  INFO 24967 --- [product-service] [restartedMain] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2025-11-11T07:40:27.361-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a3a04aeb-66f6-36c6-97d1-cfa1243281e2
-2025-11-11T07:40:27.577-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4000 (http)
-2025-11-11T07:40:27.583-06:00  INFO 24967 --- [product-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-11-11T07:40:27.583-06:00  INFO 24967 --- [product-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
-2025-11-11T07:40:27.600-06:00  INFO 24967 --- [product-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-11-11T07:40:27.600-06:00  INFO 24967 --- [product-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 900 ms
-2025-11-11T07:40:27.723-06:00  INFO 24967 --- [product-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-11-11T07:40:27.748-06:00  INFO 24967 --- [product-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
-2025-11-11T07:40:27.761-06:00  INFO 24967 --- [product-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-11-11T07:40:27.866-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-11-11T07:40:27.877-06:00  INFO 24967 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-11-11T07:40:27.941-06:00  INFO 24967 --- [product-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@14b3542b
-2025-11-11T07:40:27.941-06:00  INFO 24967 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-11-11T07:40:27.974-06:00  INFO 24967 --- [product-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-11-13T00:03:59.651-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T00:09:01.109-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T00:14:01.115-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T00:19:11.452-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T00:24:11.456-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T00:29:11.472-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T00:34:11.446-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T00:39:11.449-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T00:44:11.453-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T00:49:11.456-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T00:54:11.458-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T00:59:11.459-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T01:04:11.516-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T01:09:11.525-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T01:14:11.533-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T01:19:11.540-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T01:24:11.549-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T01:29:11.555-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T01:34:11.572-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T01:39:11.591-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T01:44:11.601-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T01:49:11.611-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T01:54:11.616-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T01:59:11.657-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T02:04:11.710-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T02:09:11.745-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T02:14:11.759-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T02:19:11.773-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T02:24:11.781-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T02:29:11.790-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T02:34:11.797-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T02:39:11.785-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T02:44:11.791-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T02:49:11.799-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T02:54:11.811-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T02:59:11.816-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T03:04:11.822-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T03:09:11.806-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T03:14:11.815-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T03:19:11.822-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T03:24:11.830-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T03:29:11.839-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T03:34:11.842-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T03:39:11.847-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T03:44:11.855-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T03:49:21.134-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1m7s943ms).
+2025-11-13T03:49:49.805-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T03:54:27.829-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1m36s657ms).
+2025-11-13T03:55:56.466-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T04:01:05.200-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T04:06:05.205-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T04:11:05.215-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T04:16:05.231-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T04:21:05.270-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T04:26:05.285-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T04:31:05.298-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T04:36:05.308-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T04:39:50.079-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=2m43s158ms).
+2025-11-13T04:43:18.468-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T04:48:18.481-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T04:54:27.618-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=5m7s464ms).
+2025-11-13T05:07:47.258-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=12m49s623ms).
+2025-11-13T05:10:15.570-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T05:15:15.579-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T05:20:15.611-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T05:25:15.622-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T05:30:15.630-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T05:35:15.642-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T05:40:15.618-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T05:45:15.642-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T05:50:15.651-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T05:55:15.660-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T06:12:02.805-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=13m45s215ms).
+2025-11-13T06:13:30.877-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T06:18:30.884-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T06:23:30.894-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T07:45:46.825-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1h22m13s948ms).
+2025-11-13T08:24:48.810-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=39m1s984ms).
+2025-11-13T09:25:45.754-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1h26s944ms).
+2025-11-13T10:26:42.742-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1h26s973ms).
+2025-11-13T11:27:39.715-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1h26s966ms).
+2025-11-13T12:28:34.576-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T12:28:36.625-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1h26s911ms).
+2025-11-13T12:55:19.215-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=26m12s586ms).
+2025-11-13T13:29:51.788-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=34m2s569ms).
+2025-11-13T13:47:20.679-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=17m28s890ms).
+2025-11-13T14:30:48.172-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=43m27s493ms).
+2025-11-13T14:53:54.341-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=22m36s149ms).
+2025-11-13T14:54:52.215-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T14:59:52.217-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T15:04:52.233-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T15:09:52.239-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T15:14:52.243-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T15:19:52.264-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T15:24:52.285-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T15:29:52.298-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T15:34:52.305-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T15:39:52.312-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T15:44:52.320-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T15:49:52.328-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T15:54:52.309-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T15:59:52.314-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T16:04:52.320-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T16:09:52.326-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T16:14:52.333-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T16:19:52.338-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T16:24:52.361-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T16:29:52.365-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T16:51:05.077-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=18m10s24ms).
+2025-11-13T18:31:04.355-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1h39m29s274ms).
+2025-11-13T18:34:21.359-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T18:34:24.066-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=3m19s710ms).
+2025-11-13T19:07:55.768-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=33m31s702ms).
+2025-11-13T19:35:21.162-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=27m25s395ms).
+2025-11-13T20:09:10.755-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=33m49s592ms).
+2025-11-13T20:36:18.126-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=27m7s371ms).
+2025-11-13T20:45:46.515-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=9m28s390ms).
+2025-11-13T20:48:13.774-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T20:53:13.780-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T20:58:13.783-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T21:20:03.866-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=21m47s270ms).
+2025-11-13T21:24:31.093-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T21:29:31.104-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T21:34:31.114-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T21:39:31.123-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T21:53:16.797-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T21:53:19.734-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=9m15s664ms).
+2025-11-13T21:58:16.805-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T22:03:28.660-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T22:08:28.665-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T22:13:28.682-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T22:18:28.686-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T22:23:28.698-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T22:25:34.666-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1m2s862ms).
+2025-11-13T22:27:05.308-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1m628ms).
+2025-11-13T22:35:51.700-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=8m16s387ms).
+2025-11-13T22:38:11.044-06:00  WARN 24967 --- [product-service] [HikariPool-3:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=2m19s344ms).
+2025-11-13T22:39:07.904-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T22:44:07.913-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T22:49:07.918-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T22:51:05.535-06:00  INFO 24967 --- [product-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-13T22:51:05.550-06:00  INFO 24967 --- [product-service] [Thread-15] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PRODUCT-SERVICE with eureka with status DOWN
+2025-11-13T22:51:05.550-06:00  INFO 24967 --- [product-service] [Thread-15] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763095865550, current=DOWN, previous=UP]
+2025-11-13T22:51:05.551-06:00  INFO 24967 --- [product-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-SERVICE/mac.lan:product-service:4000: registering service...
+2025-11-13T22:51:05.558-06:00  INFO 24967 --- [product-service] [Thread-15] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-13T22:51:05.561-06:00  INFO 24967 --- [product-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-13T22:51:05.564-06:00  INFO 24967 --- [product-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-SERVICE/mac.lan:product-service:4000 - registration status: 204
+2025-11-13T22:51:05.576-06:00  INFO 24967 --- [product-service] [Thread-15] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-11-13T22:51:06.401-06:00  INFO 24967 --- [product-service] [Thread-15] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-11-13T22:51:06.402-06:00  INFO 24967 --- [product-service] [Thread-15] o.s.i.a.i.AmqpInboundChannelAdapter      : stopped bean 'inbound.springCloudBus.anonymous.wTh1p_QUSMKsKmKO234g2A'
+2025-11-13T22:51:06.417-06:00  INFO 24967 --- [product-service] [Thread-15] o.s.c.stream.binder.BinderErrorChannel   : Channel 'product-service-1.rabbit-791909130.springCloudBusInput.errors' has 1 subscriber(s).
+2025-11-13T22:51:06.419-06:00  INFO 24967 --- [product-service] [Thread-15] o.s.c.stream.binder.BinderErrorChannel   : Channel 'product-service-1.rabbit-791909130.springCloudBusInput.errors' has 0 subscriber(s).
+2025-11-13T22:51:06.430-06:00  INFO 24967 --- [product-service] [Thread-15] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-11-13T22:51:06.430-06:00  INFO 24967 --- [product-service] [Thread-15] o.s.i.channel.PublishSubscribeChannel    : Channel 'product-service-1.errorChannel' has 0 subscriber(s).
+2025-11-13T22:51:06.430-06:00  INFO 24967 --- [product-service] [Thread-15] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
+2025-11-13T22:51:06.446-06:00  INFO 24967 --- [product-service] [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T22:51:06.448-06:00  INFO 24967 --- [product-service] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-11-13T22:51:06.450-06:00  INFO 24967 --- [product-service] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-11-13T22:51:06.451-06:00  INFO 24967 --- [product-service] [Thread-15] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-11-13T22:51:09.452-06:00  INFO 24967 --- [product-service] [Thread-15] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-11-13T22:51:09.459-06:00  INFO 24967 --- [product-service] [Thread-15] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-SERVICE/mac.lan:product-service:4000 - deregister  status: 200
+2025-11-13T22:51:09.459-06:00  INFO 24967 --- [product-service] [Thread-15] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-11-13T22:51:09.462-06:00  INFO 24967 --- [product-service] [Thread-15] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-13T22:51:09.642-06:00 ERROR 24967 --- [product-service] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.yaml.snakeyaml.scanner.ScannerException: while scanning an alias
+ in 'reader', line 37, column 18:
+            include: *
+                     ^
+unexpected character found  (0)
+ in 'reader', line 37, column 19:
+            include: *
+                      ^
+
+	at org.yaml.snakeyaml.scanner.ScannerImpl.scanAnchor(ScannerImpl.java:1518) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchAlias(ScannerImpl.java:962) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:412) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:239) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:669) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:161) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:57) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:43) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:136) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:116) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeScalarNode(Composer.java:249) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:214) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeKeyNode(Composer.java:386) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:357) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:329) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:218) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:396) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:361) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:329) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:218) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:396) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:361) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:329) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:218) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:396) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:361) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:329) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:218) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:396) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:361) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:329) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:218) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:141) ~[snakeyaml-2.4.jar:na]
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:163) ~[snakeyaml-2.4.jar:na]
+	at org.springframework.boot.env.OriginTrackedYamlLoader$OriginTrackingConstructor.getData(OriginTrackedYamlLoader.java:99) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:530) ~[snakeyaml-2.4.jar:na]
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:203) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:169) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:84) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:54) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:36) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:96) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:132) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:87) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:129) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:245) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:232) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:132) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:115) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64) ~[spring-boot-3.5.5.jar:3.5.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:353) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:149) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:198) ~[spring-cloud-context-4.3.0.jar:4.3.0]
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:114) ~[spring-cloud-context-4.3.0.jar:4.3.0]
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:77) ~[spring-cloud-context-4.3.0.jar:4.3.0]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64) ~[spring-boot-3.5.5.jar:3.5.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:353) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.ecom.productservice.ProductServiceApplication.main(ProductServiceApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.5.jar:3.5.5]
+
+2025-11-13T22:54:09.090-06:00  INFO 35409 --- [product-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-13T22:54:09.283-06:00  INFO 35409 --- [product-service] [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2025-11-13T22:54:09.360-06:00  INFO 35409 --- [product-service] [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=product-service, profiles=[default], label=null, version=null, state=null
+2025-11-13T22:54:09.361-06:00  INFO 35409 --- [product-service] [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
+2025-11-13T22:54:09.366-06:00  INFO 35409 --- [product-service] [restartedMain] o.e.p.ProductServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-11-13T22:54:09.905-06:00  INFO 35409 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-13T22:54:09.969-06:00  INFO 35409 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interface.
+2025-11-13T22:54:10.086-06:00  INFO 35409 --- [product-service] [restartedMain] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-11-13T22:54:10.090-06:00  INFO 35409 --- [product-service] [restartedMain] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-11-13T22:54:10.142-06:00  INFO 35409 --- [product-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=71c807c0-4294-3e23-b962-6b5c487bc664
+2025-11-13T22:54:10.398-06:00  INFO 35409 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4000 (http)
+2025-11-13T22:54:10.407-06:00  INFO 35409 --- [product-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-13T22:54:10.408-06:00  INFO 35409 --- [product-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-11-13T22:54:10.431-06:00  INFO 35409 --- [product-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-13T22:54:10.431-06:00  INFO 35409 --- [product-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1061 ms
+2025-11-13T22:54:10.582-06:00  INFO 35409 --- [product-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-13T22:54:10.625-06:00  INFO 35409 --- [product-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-11-13T22:54:10.640-06:00  INFO 35409 --- [product-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-13T22:54:10.738-06:00  INFO 35409 --- [product-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-13T22:54:10.749-06:00  INFO 35409 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-13T22:54:10.830-06:00  INFO 35409 --- [product-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7c5ff3ea
+2025-11-13T22:54:10.831-06:00  INFO 35409 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-13T22:54:10.862-06:00  INFO 35409 --- [product-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 17.6
@@ -28,180 +291,60 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-11-11T07:40:28.292-06:00  INFO 24967 --- [product-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-11-11T07:40:28.326-06:00  INFO 24967 --- [product-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-11-11T07:40:28.517-06:00  WARN 24967 --- [product-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-11-11T07:40:28.868-06:00  WARN 24967 --- [product-service] [restartedMain] c.f.c.c.BeanFactoryAwareFunctionRegistry : Failed to locate function 'busConsumer' for function definition 'busConsumer'. Returning null.
-2025-11-11T07:40:28.887-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'product-service-1.springCloudBusInput' has 1 subscriber(s).
-2025-11-11T07:40:28.986-06:00  WARN 24967 --- [product-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2025-11-11T07:40:28.997-06:00  INFO 24967 --- [product-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-11-11T07:40:29.014-06:00  WARN 24967 --- [product-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-11-11T07:40:29.018-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-11-11T07:40:29.093-06:00  INFO 24967 --- [product-service] [restartedMain] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel errorChannel
-2025-11-11T07:40:29.095-06:00  INFO 24967 --- [product-service] [restartedMain] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel springCloudBusInput
-2025-11-11T07:40:29.098-06:00  INFO 24967 --- [product-service] [restartedMain] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel nullChannel
-2025-11-11T07:40:29.101-06:00  INFO 24967 --- [product-service] [restartedMain] figuration$IntegrationJmxConfiguration$1 : Registering MessageHandler _org.springframework.integration.errorLogger
-2025-11-11T07:40:29.106-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2025-11-11T07:40:29.106-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.i.channel.PublishSubscribeChannel    : Channel 'product-service-1.errorChannel' has 1 subscriber(s).
-2025-11-11T07:40:29.106-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
-2025-11-11T07:40:29.133-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-11-11T07:40:29.143-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-11-11T07:40:29.145-06:00  INFO 24967 --- [product-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T07:40:29.148-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-11-11T07:40:29.148-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-11-11T07:40:29.148-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-11-11T07:40:29.148-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-11-11T07:40:29.148-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-11-11T07:40:29.148-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-11-11T07:40:29.148-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-11-11T07:40:29.239-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-11-11T07:40:29.240-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-11-11T07:40:29.241-06:00  INFO 24967 --- [product-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-11-11T07:40:29.242-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1762868429241 with initial instances count: 4
-2025-11-11T07:40:29.243-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PRODUCT-SERVICE with eureka with status UP
-2025-11-11T07:40:29.244-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1762868429244, current=UP, previous=STARTING]
-2025-11-11T07:40:29.244-06:00  INFO 24967 --- [product-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-SERVICE/mac.lan:product-service:4000: registering service...
-2025-11-11T07:40:29.244-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Creating binder: rabbit
-2025-11-11T07:40:29.245-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Constructing binder child context for rabbit
-2025-11-11T07:40:29.259-06:00  INFO 24967 --- [product-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-SERVICE/mac.lan:product-service:4000 - registration status: 204
-2025-11-11T07:40:29.279-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Caching the binder: rabbit
-2025-11-11T07:40:29.283-06:00  INFO 24967 --- [product-service] [restartedMain] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: springCloudBus.anonymous.g3k-3h17TiK3M7zwyVfQhg, bound to: springCloudBus
-2025-11-11T07:40:29.285-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2025-11-11T07:40:29.309-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#777f6a07:0/SimpleConnection@35e4a919 [delegate=amqp://guest@127.0.0.1:5672/, localPort=54366]
-2025-11-11T07:40:29.348-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'rabbit-1579555041.springCloudBusInput.errors' has 1 subscriber(s).
-2025-11-11T07:40:29.348-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'rabbit-1579555041.springCloudBusInput.errors' has 2 subscriber(s).
-2025-11-11T07:40:29.359-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.i.a.i.AmqpInboundChannelAdapter      : started bean 'inbound.springCloudBus.anonymous.g3k-3h17TiK3M7zwyVfQhg'
-2025-11-11T07:40:29.367-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4000 (http) with context path '/'
-2025-11-11T07:40:29.367-06:00  INFO 24967 --- [product-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 4000
-2025-11-11T07:40:29.384-06:00  INFO 24967 --- [product-service] [restartedMain] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel rabbit-1579555041.springCloudBusInput.errors
-2025-11-11T07:40:29.401-06:00  INFO 24967 --- [product-service] [restartedMain] o.e.p.ProductServiceApplication          : Started ProductServiceApplication in 3.245 seconds (process running for 3.697)
-2025-11-11T07:40:29.505-06:00  INFO 24967 --- [product-service] [RMI TCP Connection(1)-192.168.86.249] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-11-11T07:40:29.506-06:00  INFO 24967 --- [product-service] [RMI TCP Connection(1)-192.168.86.249] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-11-11T07:40:29.507-06:00  INFO 24967 --- [product-service] [RMI TCP Connection(1)-192.168.86.249] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-11-11T07:45:29.157-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T07:50:29.170-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T07:55:29.178-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T08:00:29.184-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T08:05:29.179-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T08:10:29.181-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T08:15:29.193-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T08:20:29.202-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T08:43:04.335-06:00  WARN 24967 --- [product-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m35s963ms).
-2025-11-11T08:44:35.162-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T08:49:35.166-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T09:21:31.101-06:00  WARN 24967 --- [product-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m56s718ms).
-2025-11-11T09:23:38.425-06:00  WARN 24967 --- [product-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m7s324ms).
-2025-11-11T09:26:39.197-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T09:31:39.211-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T09:36:39.219-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T09:41:39.229-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T09:46:39.235-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T09:51:39.238-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T09:56:39.242-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T10:01:39.248-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T10:06:39.254-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T10:11:39.273-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T10:16:39.280-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T10:21:39.288-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T10:26:39.294-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T10:31:26.387-06:00  INFO 24967 --- [product-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-11-11T10:31:26.396-06:00  INFO 24967 --- [product-service] [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PRODUCT-SERVICE with eureka with status DOWN
-2025-11-11T10:31:26.396-06:00  INFO 24967 --- [product-service] [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1762878686396, current=DOWN, previous=UP]
-2025-11-11T10:31:26.397-06:00  INFO 24967 --- [product-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-SERVICE/mac.lan:product-service:4000: registering service...
-2025-11-11T10:31:26.430-06:00  INFO 24967 --- [product-service] [Thread-1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-11-11T10:31:26.434-06:00  INFO 24967 --- [product-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-11-11T10:31:26.438-06:00  INFO 24967 --- [product-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-SERVICE/mac.lan:product-service:4000 - registration status: 204
-2025-11-11T10:31:26.466-06:00  INFO 24967 --- [product-service] [Thread-1] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-11-11T10:31:27.268-06:00  INFO 24967 --- [product-service] [Thread-1] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-11-11T10:31:27.270-06:00  INFO 24967 --- [product-service] [Thread-1] o.s.i.a.i.AmqpInboundChannelAdapter      : stopped bean 'inbound.springCloudBus.anonymous.g3k-3h17TiK3M7zwyVfQhg'
-2025-11-11T10:31:27.285-06:00  INFO 24967 --- [product-service] [Thread-1] o.s.c.stream.binder.BinderErrorChannel   : Channel 'product-service-1.rabbit-1579555041.springCloudBusInput.errors' has 1 subscriber(s).
-2025-11-11T10:31:27.287-06:00  INFO 24967 --- [product-service] [Thread-1] o.s.c.stream.binder.BinderErrorChannel   : Channel 'product-service-1.rabbit-1579555041.springCloudBusInput.errors' has 0 subscriber(s).
-2025-11-11T10:31:27.311-06:00  INFO 24967 --- [product-service] [Thread-1] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2025-11-11T10:31:27.311-06:00  INFO 24967 --- [product-service] [Thread-1] o.s.i.channel.PublishSubscribeChannel    : Channel 'product-service-1.errorChannel' has 0 subscriber(s).
-2025-11-11T10:31:27.311-06:00  INFO 24967 --- [product-service] [Thread-1] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
-2025-11-11T10:31:27.321-06:00  INFO 24967 --- [product-service] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-11-11T10:31:27.327-06:00  INFO 24967 --- [product-service] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-11-11T10:31:27.328-06:00  INFO 24967 --- [product-service] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-11-11T10:31:27.329-06:00  INFO 24967 --- [product-service] [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-11-11T10:31:30.337-06:00  INFO 24967 --- [product-service] [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-11-11T10:31:30.369-06:00  INFO 24967 --- [product-service] [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-SERVICE/mac.lan:product-service:4000 - deregister  status: 200
-2025-11-11T10:31:30.369-06:00  INFO 24967 --- [product-service] [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-11-11T10:31:30.372-06:00  INFO 24967 --- [product-service] [Thread-1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-11-11T10:31:30.375-06:00  INFO 24967 --- [product-service] [Thread-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2025-11-11T10:31:30.595-06:00  INFO 24967 --- [product-service] [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
-2025-11-11T10:31:30.671-06:00  INFO 24967 --- [product-service] [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=product-service, profiles=[default], label=null, version=null, state=null
-2025-11-11T10:31:30.671-06:00  INFO 24967 --- [product-service] [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}]
-2025-11-11T10:31:30.674-06:00  INFO 24967 --- [product-service] [restartedMain] o.e.p.ProductServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2025-11-11T10:31:30.944-06:00  INFO 24967 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-11-11T10:31:30.949-06:00  INFO 24967 --- [product-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interface.
-2025-11-11T10:31:31.012-06:00  INFO 24967 --- [product-service] [restartedMain] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2025-11-11T10:31:31.012-06:00  INFO 24967 --- [product-service] [restartedMain] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2025-11-11T10:31:31.024-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a3a04aeb-66f6-36c6-97d1-cfa1243281e2
-2025-11-11T10:31:31.110-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4000 (http)
-2025-11-11T10:31:31.111-06:00  INFO 24967 --- [product-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-11-11T10:31:31.111-06:00  INFO 24967 --- [product-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
-2025-11-11T10:31:31.125-06:00  INFO 24967 --- [product-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-11-11T10:31:31.125-06:00  INFO 24967 --- [product-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 450 ms
-2025-11-11T10:31:31.205-06:00  INFO 24967 --- [product-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-11-11T10:31:31.206-06:00  INFO 24967 --- [product-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-11-11T10:31:31.215-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-11-11T10:31:31.216-06:00  INFO 24967 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2025-11-11T10:31:31.249-06:00  INFO 24967 --- [product-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@57d04b45
-2025-11-11T10:31:31.249-06:00  INFO 24967 --- [product-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2025-11-11T10:31:31.257-06:00  INFO 24967 --- [product-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
-	Database driver: undefined/unknown
-	Database version: 17.6
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-11-11T10:31:31.283-06:00  INFO 24967 --- [product-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-11-11T10:31:31.303-06:00  INFO 24967 --- [product-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-11-11T10:31:31.399-06:00  WARN 24967 --- [product-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-11-11T10:31:31.655-06:00  WARN 24967 --- [product-service] [restartedMain] c.f.c.c.BeanFactoryAwareFunctionRegistry : Failed to locate function 'busConsumer' for function definition 'busConsumer'. Returning null.
-2025-11-11T10:31:31.666-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'product-service-1.springCloudBusInput' has 1 subscriber(s).
-2025-11-11T10:31:31.765-06:00  WARN 24967 --- [product-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2025-11-11T10:31:31.777-06:00  INFO 24967 --- [product-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-11-11T10:31:31.787-06:00  WARN 24967 --- [product-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-11-11T10:31:31.789-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-11-11T10:31:31.832-06:00  INFO 24967 --- [product-service] [restartedMain] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel errorChannel
-2025-11-11T10:31:31.834-06:00  INFO 24967 --- [product-service] [restartedMain] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel springCloudBusInput
-2025-11-11T10:31:31.836-06:00  INFO 24967 --- [product-service] [restartedMain] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel nullChannel
-2025-11-11T10:31:31.838-06:00  INFO 24967 --- [product-service] [restartedMain] figuration$IntegrationJmxConfiguration$1 : Registering MessageHandler _org.springframework.integration.errorLogger
-2025-11-11T10:31:31.841-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2025-11-11T10:31:31.841-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.i.channel.PublishSubscribeChannel    : Channel 'product-service-1.errorChannel' has 1 subscriber(s).
-2025-11-11T10:31:31.841-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
-2025-11-11T10:31:31.843-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-11-11T10:31:31.844-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-11-11T10:31:31.844-06:00  INFO 24967 --- [product-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-11-11T10:31:31.844-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-11-11T10:31:31.844-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-11-11T10:31:31.844-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-11-11T10:31:31.844-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-11-11T10:31:31.844-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-11-11T10:31:31.844-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-11-11T10:31:31.844-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-11-11T10:31:31.860-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-11-11T10:31:31.860-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-11-11T10:31:31.860-06:00  INFO 24967 --- [product-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-11-11T10:31:31.860-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1762878691860 with initial instances count: 4
-2025-11-11T10:31:31.861-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PRODUCT-SERVICE with eureka with status UP
-2025-11-11T10:31:31.862-06:00  INFO 24967 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1762878691862, current=UP, previous=STARTING]
-2025-11-11T10:31:31.862-06:00  INFO 24967 --- [product-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-SERVICE/mac.lan:product-service:4000: registering service...
-2025-11-11T10:31:31.862-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Creating binder: rabbit
-2025-11-11T10:31:31.862-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Constructing binder child context for rabbit
-2025-11-11T10:31:31.868-06:00  INFO 24967 --- [product-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-SERVICE/mac.lan:product-service:4000 - registration status: 204
-2025-11-11T10:31:31.880-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Caching the binder: rabbit
-2025-11-11T10:31:31.885-06:00  INFO 24967 --- [product-service] [restartedMain] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: springCloudBus.anonymous.QvqOqNZ3Q32EMmPAwaiZvw, bound to: springCloudBus
-2025-11-11T10:31:31.885-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2025-11-11T10:31:31.894-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#5affd170:0/SimpleConnection@4c1b9153 [delegate=amqp://guest@127.0.0.1:5672/, localPort=56454]
-2025-11-11T10:31:31.907-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'rabbit-40949928.springCloudBusInput.errors' has 1 subscriber(s).
-2025-11-11T10:31:31.907-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'rabbit-40949928.springCloudBusInput.errors' has 2 subscriber(s).
-2025-11-11T10:31:31.909-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.i.a.i.AmqpInboundChannelAdapter      : started bean 'inbound.springCloudBus.anonymous.QvqOqNZ3Q32EMmPAwaiZvw'
-2025-11-11T10:31:31.910-06:00  INFO 24967 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4000 (http) with context path '/'
-2025-11-11T10:31:31.911-06:00  INFO 24967 --- [product-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 4000
-2025-11-11T10:31:31.924-06:00  INFO 24967 --- [product-service] [restartedMain] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel rabbit-40949928.springCloudBusInput.errors
-2025-11-11T10:31:31.931-06:00  INFO 24967 --- [product-service] [restartedMain] o.e.p.ProductServiceApplication          : Started ProductServiceApplication in 1.416 seconds (process running for 7196.274)
-2025-11-11T10:31:31.933-06:00  INFO 24967 --- [product-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2025-11-11T10:36:31.851-06:00  INFO 24967 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T22:54:11.250-06:00  INFO 35409 --- [product-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-13T22:54:11.298-06:00  INFO 35409 --- [product-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T22:54:11.504-06:00  WARN 35409 --- [product-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-13T22:54:11.874-06:00  WARN 35409 --- [product-service] [restartedMain] c.f.c.c.BeanFactoryAwareFunctionRegistry : Failed to locate function 'busConsumer' for function definition 'busConsumer'. Returning null.
+2025-11-13T22:54:11.893-06:00  INFO 35409 --- [product-service] [restartedMain] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'product-service-1.springCloudBusInput' has 1 subscriber(s).
+2025-11-13T22:54:11.998-06:00  WARN 35409 --- [product-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-11-13T22:54:12.009-06:00  INFO 35409 --- [product-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-11-13T22:54:12.026-06:00  WARN 35409 --- [product-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-13T22:54:12.029-06:00  INFO 35409 --- [product-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 25 endpoints beneath base path '/actuator'
+2025-11-13T22:54:12.099-06:00  INFO 35409 --- [product-service] [restartedMain] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel errorChannel
+2025-11-13T22:54:12.102-06:00  INFO 35409 --- [product-service] [restartedMain] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel springCloudBusInput
+2025-11-13T22:54:12.103-06:00  INFO 35409 --- [product-service] [restartedMain] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel nullChannel
+2025-11-13T22:54:12.105-06:00  INFO 35409 --- [product-service] [restartedMain] figuration$IntegrationJmxConfiguration$1 : Registering MessageHandler _org.springframework.integration.errorLogger
+2025-11-13T22:54:12.109-06:00  INFO 35409 --- [product-service] [restartedMain] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-11-13T22:54:12.110-06:00  INFO 35409 --- [product-service] [restartedMain] o.s.i.channel.PublishSubscribeChannel    : Channel 'product-service-1.errorChannel' has 1 subscriber(s).
+2025-11-13T22:54:12.110-06:00  INFO 35409 --- [product-service] [restartedMain] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2025-11-13T22:54:12.133-06:00  INFO 35409 --- [product-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-11-13T22:54:12.144-06:00  INFO 35409 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-11-13T22:54:12.146-06:00  INFO 35409 --- [product-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T22:54:12.149-06:00  INFO 35409 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-11-13T22:54:12.149-06:00  INFO 35409 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-11-13T22:54:12.149-06:00  INFO 35409 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-11-13T22:54:12.149-06:00  INFO 35409 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-11-13T22:54:12.149-06:00  INFO 35409 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-11-13T22:54:12.149-06:00  INFO 35409 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-11-13T22:54:12.149-06:00  INFO 35409 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-11-13T22:54:12.237-06:00  INFO 35409 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-11-13T22:54:12.237-06:00  INFO 35409 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-11-13T22:54:12.238-06:00  INFO 35409 --- [product-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-13T22:54:12.239-06:00  INFO 35409 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1763096052238 with initial instances count: 1
+2025-11-13T22:54:12.240-06:00  INFO 35409 --- [product-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PRODUCT-SERVICE with eureka with status UP
+2025-11-13T22:54:12.241-06:00  INFO 35409 --- [product-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763096052241, current=UP, previous=STARTING]
+2025-11-13T22:54:12.241-06:00  INFO 35409 --- [product-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-SERVICE/mac.lan:product-service:4000: registering service...
+2025-11-13T22:54:12.242-06:00  INFO 35409 --- [product-service] [restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Creating binder: rabbit
+2025-11-13T22:54:12.242-06:00  INFO 35409 --- [product-service] [restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Constructing binder child context for rabbit
+2025-11-13T22:54:12.260-06:00  INFO 35409 --- [product-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-SERVICE/mac.lan:product-service:4000 - registration status: 204
+2025-11-13T22:54:12.284-06:00  INFO 35409 --- [product-service] [restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Caching the binder: rabbit
+2025-11-13T22:54:12.289-06:00  INFO 35409 --- [product-service] [restartedMain] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: springCloudBus.anonymous.s-8iBk0sQ0eT5l79T4uLoQ, bound to: springCloudBus
+2025-11-13T22:54:12.291-06:00  INFO 35409 --- [product-service] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-11-13T22:54:12.317-06:00  INFO 35409 --- [product-service] [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#140c9ea9:0/SimpleConnection@3e6fb12b [delegate=amqp://guest@127.0.0.1:5672/, localPort=65456]
+2025-11-13T22:54:12.347-06:00  INFO 35409 --- [product-service] [restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'rabbit-1263063930.springCloudBusInput.errors' has 1 subscriber(s).
+2025-11-13T22:54:12.347-06:00  INFO 35409 --- [product-service] [restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'rabbit-1263063930.springCloudBusInput.errors' has 2 subscriber(s).
+2025-11-13T22:54:12.355-06:00  INFO 35409 --- [product-service] [restartedMain] o.s.i.a.i.AmqpInboundChannelAdapter      : started bean 'inbound.springCloudBus.anonymous.s-8iBk0sQ0eT5l79T4uLoQ'
+2025-11-13T22:54:12.361-06:00  INFO 35409 --- [product-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4000 (http) with context path '/'
+2025-11-13T22:54:12.362-06:00  INFO 35409 --- [product-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 4000
+2025-11-13T22:54:12.376-06:00  INFO 35409 --- [product-service] [restartedMain] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel rabbit-1263063930.springCloudBusInput.errors
+2025-11-13T22:54:12.389-06:00  INFO 35409 --- [product-service] [restartedMain] o.e.p.ProductServiceApplication          : Started ProductServiceApplication in 3.639 seconds (process running for 4.757)
+2025-11-13T22:54:12.636-06:00  INFO 35409 --- [product-service] [RMI TCP Connection(6)-192.168.86.249] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-13T22:54:12.636-06:00  INFO 35409 --- [product-service] [RMI TCP Connection(6)-192.168.86.249] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-13T22:54:12.637-06:00  INFO 35409 --- [product-service] [RMI TCP Connection(6)-192.168.86.249] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-11-13T22:59:12.154-06:00  INFO 35409 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T23:09:39.334-06:00  WARN 35409 --- [product-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m28s340ms).
+2025-11-13T23:11:47.607-06:00  WARN 35409 --- [product-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s255ms).
+2025-11-13T23:13:18.737-06:00  INFO 35409 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T23:18:18.745-06:00  INFO 35409 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T23:23:18.752-06:00  INFO 35409 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T23:28:18.762-06:00  INFO 35409 --- [product-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
